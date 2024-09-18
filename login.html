@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IMS</title>
+    <meta name="title" content="IMS" />
+    <meta name="description" content="IMS" />
+    <meta name="keywords" content="IMS" />
+    <meta name="author" content="MRA" />
+    <!-- Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Styles in CSS -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background-image: url("/images/backdrop.svg");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .login-container {
+        width: 50%;
+        height: 50%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .login-card {
+        background: white;
+        padding: 40px;
+        border-radius: 16px;
+        box-shadow: 0px 0px 11.76px 0px #00000040;
+        text-align: center;
+        position: relative;
+        width: 40%;
+        display: block;
+      }
+
+      .components {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        background-image: url("/images/components-large.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: -1;
+        border-radius: 10px;
+      }
+
+      .logo {
+        width: 100px;
+        margin-bottom: 20px;
+      }
+
+      .ims-text {
+        font-weight: 600;
+        margin-bottom: 24px;
+        color: #26382d;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 15.81px;
+        text-align: center;
+      }
+
+      .welcome-text {
+        color: #26382d;
+        margin-bottom: 8px;
+      }
+
+      .login-heading {
+        color: #009688;
+        font-weight: bold;
+        margin-bottom: 6px;
+      }
+
+      .login-form input[type="text"],
+      .login-form input[type="password"] {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        background: linear-gradient(0deg, #fcfcfc, #fcfcfc),
+          linear-gradient(0deg, #ffffff, #ffffff);
+        border-radius: 5px;
+        font-size: 16px;
+        border: 0.53px solid #aecfc8;
+      }
+
+      .login-form input[type="text"]:focus,
+      .login-form input[type="password"]:focus {
+        outline: none;
+        box-shadow: 0 0 0 0.1px #0d9276;
+        border-color: #0d9276;
+      }
+
+      .custom-checkbox {
+        appearance: none;
+        width: 12px;
+        height: 12px;
+        border: 0.53px solid #36503d;
+        border-radius: 50%;
+        background-color: white;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+        cursor: pointer;
+      }
+
+      .custom-checkbox:checked {
+        background-color: #0d9276;
+        border-color: #0d9276;
+      }
+
+      .custom-checkbox:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(13, 146, 118, 0.4);
+      }
+
+      .remember-forgot {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 0;
+      }
+
+      .remember-forgot a {
+        color: #ff5722;
+        text-decoration: none;
+        font-size: 14px;
+      }
+
+      .login-button {
+        width: 100%;
+        padding: 12px;
+        background-color: #009688;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 14px;
+        cursor: pointer;
+        margin: 10px 0;
+        font-weight: 700;
+      }
+
+      .mobile-app-button {
+        width: 100%;
+        padding: 12px;
+        background-color: transparent;
+        border: 1px solid #009688;
+        color: #009688;
+        border-radius: 5px;
+        font-size: 12px;
+        cursor: pointer;
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+      }
+
+      .celloscope {
+        color: #26382d;
+      }
+
+      @media (max-width: 575.98px) {
+        .login-container {
+          width: 100%;
+        }
+        .login-card {
+          width: 90%;
+        }
+      }
+
+      @media (min-width: 576px) {
+        .login-container {
+          width: 90%;
+        }
+        .login-card {
+          width: 70%;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .login-card {
+          width: 50%;
+        }
+      }
+
+      @media (min-width: 1300px) {
+        .login-container {
+          width: 60%;
+        }
+      }
+
+      @media (min-width: 1600px) {
+        .login-card {
+          width: 35%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <img
+        src="/images/components-large.svg"
+        alt="components"
+        class="components"
+      />
+      <div class="login-card">
+        <img src="/images/logo-ims.svg" alt="IMS Logo" class="logo" />
+        <p class="welcome-text">Welcome back to</p>
+        <h3 class="ims-text">Integrated Microcredit System (IMS)</h3>
+        <p class="login-heading">Log in here</p>
+        <form class="login-form">
+          <input type="text" placeholder="User ID" required />
+          <input type="password" placeholder="Password" required />
+          <div class="remember-forgot">
+            <label
+              style="
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+                gap: 4px;
+              "
+              ><input type="checkbox" class="custom-checkbox" /> Remember
+              Me</label
+            >
+            <a href="#">Forgot Password?</a>
+          </div>
+          <button type="submit" class="login-button">Log in</button>
+          <button type="button" class="mobile-app-button">
+            <img src="/images/download.svg" alt="download icon" />
+            Download Mobile App
+          </button>
+        </form>
+        <p class="footer-text">
+          Powered by <span class="celloscope">Celloscope Ltd</span>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
